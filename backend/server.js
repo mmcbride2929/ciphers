@@ -1,6 +1,6 @@
 const express = require("express")
 const dotenv = require("dotenv").config()
-const port = process.env.PGPORT || 5000
+const PGPORT = process.env.PGPORT
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const userRoutes = require("./routes/userRoutes.js")
@@ -23,6 +23,6 @@ app.use("/users", userRoutes)
 // routes
 app.use("/ciphers", cipherRoutes)
 
-app.listen(port, () => {
-  console.log(`running on port ${port}`)
+app.listen(PGPORT, () => {
+  console.log(`running on port ${PGPORT}`)
 })
