@@ -6,11 +6,12 @@ const client = new Client({
   // database: 'postgres',
   // user: 'postgres',
   // password: 'admin123'
-  PGHOST: process.env.DB_HOST,
-  PGPORT: process.env.DB_PORT,
-  PGDATABASE: process.env.DB_NAME,
-  PGUSER: process.env.DB_USER,
-  PGPASSWORD: process.env.DB_PASSWORD,
+  DATABASE_URL: process.env.DATABASE_URL,
+  PGDATABASE: process.env.PGDATABASE,
+  PGHOST: process.env.PGHOST,
+  PGPASSWORD: process.env.PGPASSWORD,
+  PGPORT: process.env.PGPORT,
+  PGUSER: process.env.PGUSER,
 })
 
 client.connect((err) => {
